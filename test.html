@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>Ma page </title>
+<script>
+window.onload=function(){
+    var sortie= document.getElementById('sortie')
+    var resultat=''
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position){
+           var lat= position.coords.latitude;
+           var long= position.coords.longitude;
+           var alt= position.coords.altitude;
+           resultat += 'latitude: ' + lat +','
+           resultat += 'longitude: ' + long +','
+           resultat += 'altitude: ' + alt +','
+           sortie.firstChild.nodeValue=resultat;
+        })
+    }else{
+        sortie.firstChild.nodeValue='geolocation non disponible'
+    }
+}
+
+</script>
+<style>
+header {
+
+width:400px;
+height:240 px;
+border:1px solid #888;
+}
+</style> 
+<link rel ="stylesheet" href="style.css">
+<h1 class="titre" >Santé et <em> bien</em> être</h1>
+</head>
+
+<body>
+
+    <div class = "gtitre"><h2><a href="tgdfam.com">Un emballage en spray pour conserver les fruits et légumes débarque en Europe</a>  </h2>
+    <p>Il pourrait devenir un nouvel acteur dans la lutte contre le gaspillage alimentaire.Pourquoi consommer des fruits et légumes ?
+        Parce qu’ils sont riches en vitamines, en minéraux, en fibres et parce que leur effet favorable sur la santé a été démontré. Ils ont un rôle protecteur dans la prévention de maladies apparaissant à l’âge adulte, comme les cancers, les maladies cardiovasculaires, l’obésité, le diabète... Enfin et surtout, ils offrent une incroyable variété de saveurs, tout ce qu’il faut pour conjuguer santé et plaisir</p> </div>
+    
+    <p id="sortie">Passage à une autre page</p>
+    <a href="cvJULIA.html">Auteur</a>
+    <header>      
+        <a href="fezk.com">  
+            <hgroup>
+             <h1>Les fruits sucrés  </h1>
+             <h1>Les panaches  </h1>
+            </hgroup>
+        </a>
+        </header>
+  
+   <h1 draggable="true">Deplacer  </h1>
+    <h1 > Les 5 fruits et legumes indispensable  </h1>
+    <section class="principale">
+        <figure>
+            <img src="fruit.JPG"> 
+            <figcaption> Les fruits</figcaption>
+        </figure>
+       
+        <article class="article1"> <h1 contenteditable="true">L'indispensables   </h1>Ou 4 de légumes et 1 fruit… Si vous en mangez moins, sachez qu’augmenter même légèrement sa consommation de légumes et de fruits est bon pour la santé. L’idéal est d’alterner entre fruits et légumes, d’en diversifier les variétés et de les intégrer le plus souvent possible dans vos recettes: gratins, tartes salées ou sucrées... </article>
+        <h1>Une portion c'est quoi?  </h1>
+        <article class="article2">C’est l’équivalent de 80 à 100 grammes, par exemple : une tomate de taille moyenne, une poignée de tomates cerise, 1 poignée de haricots verts, 1 bol de soupe, 1 pomme, 2 abricots, 4-5 fraises, 1 banane... </article>
+       
+        <article class="article3">
+            <h1>Pourquoi consommer des fruits et légumes ?   </h1>
+            Pourquoi consommer des fruits et légumes ?
+            Parce qu’ils sont riches en vitamines, en minéraux, en fibres et parce que leur effet favorable sur la santé a été démontré. Ils ont un rôle protecteur dans la prévention de maladies apparaissant à l’âge adulte, comme les cancers, les maladies cardiovasculaires, l’obésité, le diabète... Enfin et surtout, ils offrent une incroyable variété de saveurs, tout ce qu’il faut pour conjuguer santé et plaisir.</article>
+            <article class="article4">En plus des fruits et légumes, il est recommandé de consommer une petite poignée de fruits à coque (noix, noisettes, amandes et pistaches non salées, etc.) par jour, riches en acides gras polyinsaturés et en particulier en oméga 3 pour ce qui est des noix.</article>
+        </section>
+
+  <form action="" method="POST" name= "form1">  
+        <h3 > Veuillez remplir vos coordonées   </h3>
+<label>Nom:</label></br>
+<input type="text" name="monnom" value="" autocomplete="on" required autofocus></br>
+<label for="monprenom">Prenom:</label></br>
+<input type="text" name="monprenom" value="" placeholder="Taper votre prenom"></br>
+<label for="monpass">Password:</label></br>
+<input type="password" name="monpass" value="12345"></br>
+<input type="date" name="d" value="<?php echo $today?>">
+<input type="submit" name="envoi" value="Enregistrer"></br>
+<input type="image" src="legumes.JPG"></br>
+<label for="checkbox1">Enregistrer ma connexion :</label></br>
+<input type="checkbox" name="checkbox1" value="checkbox">
+<input type="file" name="file"></br>
+<label for="monlist">Quels vitamine vous chercher?</label></br>
+<input type="text" name="monlist" id="monlist" list="categories"></br>
+<datalist id="categories">
+    <option label="Vitamine A" value="pomme,poire , peche"></option>
+    <option label="Vitamine b" value="concombre, annanas"></option>
+    <option label="Vitamine C" value="brocolis, figue"></option>
+
+</datalist>
+
+</form>
+
+
+<section> <h3>Differentes calorie apporté par chaque fruit et légumes  </h3>
+    <table> 
+        <thead>
+            <tr>
+                <th>Fruits</th>
+                    <th>Calories</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pomme</td>
+                    <td>80%</td>
+            </tr>
+            
+            <tr>
+                <td>POIRE</td>
+                    <td>50%</td>
+            </tr>
+            <tr>
+                <td>Annanas</td>
+                    <td>60%</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    </section>
+
+<section> <h3>Veuillez choisir le fruit qui vous intérésse</h3>
+<select name="select2" size="4">
+    <option>Pomme</option>
+    <option>Poire</option>
+    <option>Ananas </option>
+    <option>Raisin  </option>
+    </select>
+</section>
+<section> 
+    <h3>Indiquer ci dessous vos commentaire , votre préférence  , suggestion   </h3>
+   <textarea spellcheck="true">
+      Les preferences de ...........
+   </textarea>
+</section> 
+    <nav>
+
+        <details>
+            <summary> Les calories pour une piéce </summary>
+             <ul>
+                 <li> Pomme 140kcl</li>
+                 <li> Poire  140kcl</li>
+                 <li> Fraise 50kcl</li>
+             </ul>
+
+        </details>
+        <ul>
+            <li> <a href="https://www.w3s.com">Visit W3!</a> </li>
+            <li><a href="https://www.w3s.com">Visit W3!</a> </li>
+            <h1>La menu </h1>
+            <li><menu label="letter" type="list" >
+         <button type="button" onclick="a()">  A </button>
+         <button type="button" onclick="b()">  B </button>
+            </menu></li>
+        </ul>
+
+    </nav>
+   
+
+    <video></video>
+    <audio></audio>
+    <figure></figure>
+
+
+
+</body>
+</html>
